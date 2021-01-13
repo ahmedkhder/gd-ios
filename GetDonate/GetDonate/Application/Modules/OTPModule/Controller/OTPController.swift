@@ -19,7 +19,6 @@ class OTPController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.otpView.getOTP = { otpString in
-            print("OTP =====> %@", otpString)
             self.btnVerify.isEnabled(otpString.length == 4)
         }
     }
