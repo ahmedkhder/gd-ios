@@ -25,6 +25,9 @@
 		F041295725A7F9450011A8AB /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = F041295625A7F9450011A8AB /* Protocols.swift */; };
 		F041296925A7FB6C0011A8AB /* RoomWatchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F041296725A7FB6C0011A8AB /* RoomWatchCell.swift */; };
 		F041296A25A7FB6C0011A8AB /* RoomWatchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F041296825A7FB6C0011A8AB /* RoomWatchCell.xib */; };
+		F0463A8525AF549D00BBE47A /* DonationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0463A8425AF549D00BBE47A /* DonationController.swift */; };
+		F0463A8D25AF54C200BBE47A /* DonationVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0463A8C25AF54C200BBE47A /* DonationVM.swift */; };
+		F05C77B925BF2885007CAE36 /* GDFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05C77B825BF2885007CAE36 /* GDFont.swift */; };
 		F06D734725A4AE3D00F777EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F06D734525A4AE3D00F777EB /* Main.storyboard */; };
 		F06D734A25A4AE3D00F777EB /* GetDonate.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F06D734825A4AE3D00F777EB /* GetDonate.xcdatamodeld */; };
 		F06D734C25A4AE4100F777EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F06D734B25A4AE4100F777EB /* Assets.xcassets */; };
@@ -48,7 +51,7 @@
 		F06D73DE25A4B07600F777EB /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06D73C325A4B07500F777EB /* UIImage+Extension.swift */; };
 		F06D73DF25A4B07600F777EB /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06D73C525A4B07500F777EB /* Date+Extension.swift */; };
 		F06D73E025A4B07600F777EB /* DataType+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06D73C725A4B07500F777EB /* DataType+Ext.swift */; };
-		F06D73E125A4B07600F777EB /* Strin+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06D73C925A4B07500F777EB /* Strin+Ext.swift */; };
+		F06D73E125A4B07600F777EB /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06D73C925A4B07500F777EB /* String+Ext.swift */; };
 		F06D73E225A4B07600F777EB /* NSUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06D73CB25A4B07500F777EB /* NSUserDefaults.swift */; };
 		F06D73E325A4B07600F777EB /* LogPrint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06D73CD25A4B07500F777EB /* LogPrint.swift */; };
 		F06D73E425A4B07600F777EB /* SKImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06D73CF25A4B07500F777EB /* SKImagePicker.swift */; };
@@ -117,6 +120,9 @@
 		F041295625A7F9450011A8AB /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		F041296725A7FB6C0011A8AB /* RoomWatchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomWatchCell.swift; sourceTree = "<group>"; };
 		F041296825A7FB6C0011A8AB /* RoomWatchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoomWatchCell.xib; sourceTree = "<group>"; };
+		F0463A8425AF549D00BBE47A /* DonationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationController.swift; sourceTree = "<group>"; };
+		F0463A8C25AF54C200BBE47A /* DonationVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationVM.swift; sourceTree = "<group>"; };
+		F05C77B825BF2885007CAE36 /* GDFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDFont.swift; sourceTree = "<group>"; };
 		F06D733C25A4AE3D00F777EB /* GetDonate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GetDonate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F06D734625A4AE3D00F777EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F06D734925A4AE3D00F777EB /* GetDonate.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GetDonate.xcdatamodel; sourceTree = "<group>"; };
@@ -146,7 +152,7 @@
 		F06D73C325A4B07500F777EB /* UIImage+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		F06D73C525A4B07500F777EB /* Date+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		F06D73C725A4B07500F777EB /* DataType+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DataType+Ext.swift"; sourceTree = "<group>"; };
-		F06D73C925A4B07500F777EB /* Strin+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Strin+Ext.swift"; sourceTree = "<group>"; };
+		F06D73C925A4B07500F777EB /* String+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
 		F06D73CB25A4B07500F777EB /* NSUserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSUserDefaults.swift; sourceTree = "<group>"; };
 		F06D73CD25A4B07500F777EB /* LogPrint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogPrint.swift; sourceTree = "<group>"; };
 		F06D73CF25A4B07500F777EB /* SKImagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKImagePicker.swift; sourceTree = "<group>"; };
@@ -337,6 +343,31 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		F0463A8125AF548600BBE47A /* DonationModule */ = {
+			isa = PBXGroup;
+			children = (
+				F0463A8225AF548600BBE47A /* DonationVM */,
+				F0463A8325AF548600BBE47A /* DonationController */,
+			);
+			path = DonationModule;
+			sourceTree = "<group>";
+		};
+		F0463A8225AF548600BBE47A /* DonationVM */ = {
+			isa = PBXGroup;
+			children = (
+				F0463A8C25AF54C200BBE47A /* DonationVM.swift */,
+			);
+			path = DonationVM;
+			sourceTree = "<group>";
+		};
+		F0463A8325AF548600BBE47A /* DonationController */ = {
+			isa = PBXGroup;
+			children = (
+				F0463A8425AF549D00BBE47A /* DonationController.swift */,
+			);
+			path = DonationController;
+			sourceTree = "<group>";
+		};
 		F06D733325A4AE3D00F777EB = {
 			isa = PBXGroup;
 			children = (
@@ -416,6 +447,7 @@
 		F06D738D25A4AF8C00F777EB /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				F0463A8125AF548600BBE47A /* DonationModule */,
 				F041293925A767B90011A8AB /* WelcomeController */,
 				F06D738F25A4AF8C00F777EB /* LoginModule */,
 				F06D738E25A4AF8C00F777EB /* OTPModule */,
@@ -604,7 +636,7 @@
 		F06D73C825A4B07500F777EB /* String+Extension */ = {
 			isa = PBXGroup;
 			children = (
-				F06D73C925A4B07500F777EB /* Strin+Ext.swift */,
+				F06D73C925A4B07500F777EB /* String+Ext.swift */,
 			);
 			path = "String+Extension";
 			sourceTree = "<group>";
@@ -663,6 +695,7 @@
 				F06D73F325A4B13800F777EB /* GDMessages.swift */,
 				F06D73FE25A4B15B00F777EB /* GDEnum.swift */,
 				F06D740325A4B18000F777EB /* GDColor.swift */,
+				F05C77B825BF2885007CAE36 /* GDFont.swift */,
 			);
 			path = AppConstant;
 			sourceTree = "<group>";
@@ -977,6 +1010,7 @@
 			files = (
 				F031846725A8B4450063856B /* InTheRoomVM.swift in Sources */,
 				F06D73DB25A4B07600F777EB /* AppleCALayer.swift in Sources */,
+				F0463A8D25AF54C200BBE47A /* DonationVM.swift in Sources */,
 				F06D73FF25A4B15B00F777EB /* GDEnum.swift in Sources */,
 				F06D73DD25A4B07600F777EB /* Image+Letters.swift in Sources */,
 				F031846C25A8B45B0063856B /* InTheRoomM.swift in Sources */,
@@ -1005,6 +1039,7 @@
 				F06D73E525A4B07600F777EB /* SKLabel.swift in Sources */,
 				F0F9CC0D25AA0EA000DA706A /* OTPController.swift in Sources */,
 				F06D73D925A4B07600F777EB /* CollectioView+Extension.swift in Sources */,
+				F0463A8525AF549D00BBE47A /* DonationController.swift in Sources */,
 				F041293B25A767EA0011A8AB /* WelcomeController.swift in Sources */,
 				F06D741725A4B40000F777EB /* HTTPMethod.swift in Sources */,
 				F06D73E425A4B07600F777EB /* SKImagePicker.swift in Sources */,
@@ -1012,12 +1047,13 @@
 				F041295725A7F9450011A8AB /* Protocols.swift in Sources */,
 				F06D741825A4B40000F777EB /* EndPoints.swift in Sources */,
 				F06D740425A4B18000F777EB /* GDColor.swift in Sources */,
+				F05C77B925BF2885007CAE36 /* GDFont.swift in Sources */,
 				F06D73DC25A4B07600F777EB /* Navigation+Extension.swift in Sources */,
 				F06D73DE25A4B07600F777EB /* UIImage+Extension.swift in Sources */,
 				F06D737725A4AEA400F777EB /* AppDelegate.swift in Sources */,
 				F041296925A7FB6C0011A8AB /* RoomWatchCell.swift in Sources */,
 				F06D73E225A4B07600F777EB /* NSUserDefaults.swift in Sources */,
-				F06D73E125A4B07600F777EB /* Strin+Ext.swift in Sources */,
+				F06D73E125A4B07600F777EB /* String+Ext.swift in Sources */,
 				F06D73D625A4B07600F777EB /* Spinner.swift in Sources */,
 				F031847325A8B5330063856B /* InTheRoomCell.swift in Sources */,
 				F06D73D725A4B07600F777EB /* SKView.swift in Sources */,

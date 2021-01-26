@@ -18,16 +18,22 @@ class InTheRoomCell: UICollectionViewCell, DequeuableRegistrable {
     @IBOutlet var lblPrice: UILabel!
     @IBOutlet var lblDateTime: UILabel!
     @IBOutlet var imgView: UIImageView!
-    @IBOutlet var viewDonate: UIView!
-    @IBOutlet var viewBG: UIView!
+    @IBOutlet var viewDonate: UIView! {
+        didSet {
+            viewDonate.roundCorners([.topLeft, .topRight], radius: 12)
+        }
+    }
+    @IBOutlet var viewBG: UIView! {
+        didSet{
+            viewBG.roundCorners([.bottomLeft, .bottomRight], radius: 20)
+        }
+    }
     @IBOutlet var btnThumbUp: UIButton!
     @IBOutlet var btnHeart: UIButton!
     var delegate: InTheRoomCellDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        viewBG.roundCorners([.bottomLeft, .bottomRight], radius: 20)
-        viewDonate.roundCorners([.topLeft, .topRight], radius: 12)
     }
 }
 //MARK: Setup

@@ -292,3 +292,37 @@ extension String {
         return try? JSONSerialization.jsonObject(with: data, options: .allowFragments) as? [String: Any]
     }
 }
+//11111111 to 1111-1111-111
+// let str = customStringFormatting(of: 4)
+//func customStringFormatting(of str: String) -> String {
+//    return str.chunk(n: 4)
+//        .map{ String($0) }.joined(separator: "-")
+//}
+//extension String {
+//    func chunkFormatted(withChunkSize chunkSize: Int = 4,
+//        withSeparator separator: Character = "-") -> String {
+//        return characters.filter { $0 != separator }.chunk(n: chunkSize)
+//            .map{ String($0) }.joined(separator: String(separator))
+//    }
+//}
+extension String {
+    func chunkFormatted(withChunkSize chunkSize: Int = 4,
+        withSeparator separator: Character = " ") -> String {
+        return self.filter { $0 != separator }.chunk(n: chunkSize)
+            .map{ String($0) }.joined(separator: String(separator))
+    }
+}
+
+extension Collection {
+    public func chunk(n: Int) -> [SubSequence] {
+        var res: [SubSequence] = []
+        var i = startIndex
+        var j: Index
+        while i != endIndex {
+            j = index(i, offsetBy: n, limitedBy: endIndex) ?? endIndex
+            res.append(self[i..<j])
+            i = j
+        }
+        return res
+    }
+}

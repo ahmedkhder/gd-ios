@@ -46,6 +46,7 @@ class OTPView: UIStackView {
             field.layer.cornerRadius = 3
             field.layer.shadowColor = UIColor.black.cgColor
             field.tintColor = .darkGray
+            field.keyboardType = .numberPad
             field.font = UIFont.boldSystemFont(ofSize: 22)
             i != 0 ? (field.previousTextField = textFieldArray[i-1]) : ()
             i != 0 ? (textFieldArray[i-1].nextTextFiled = textFieldArray[i]) : ()

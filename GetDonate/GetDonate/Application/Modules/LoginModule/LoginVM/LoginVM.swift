@@ -20,7 +20,7 @@ class LoginVM: NSObject, LoginVMDelegate {
             self.emitValidity()
         }
     }
-    var isValidListener: ((Bool) -> ())?
+    var isValidListener: ValidateListner = nil
     
     override init() {
         self.mobileNo = Observer(.kEMPTY)
@@ -37,7 +37,3 @@ extension LoginVM {
 //        self.arrayData.value = [["Shiv":"kumar"], ["Shiv":"kumar"]]
     }
 }
-extension LoginVM {
-    
-}
-

@@ -40,6 +40,7 @@ extension InTheRoomVM: UICollectionViewDataSource, UICollectionViewDelegate {
         return cell
     }
 }
+
 extension InTheRoomVM: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

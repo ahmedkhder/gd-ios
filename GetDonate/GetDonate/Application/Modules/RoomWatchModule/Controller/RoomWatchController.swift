@@ -25,9 +25,9 @@ extension RoomWatchController {
     }
     func configVM() {
         self.roomWatchVM.config(item: tblView)
-        self.roomWatchVM.selectedListener = { (index, msg) in
+        self.roomWatchVM.selectedListener = {[weak self] (index, msg) in
             let inRommVC = InTheRoomController.instantiate()
-            self.PUSH(inRommVC)
+            self?.PUSH(inRommVC)
         }
     }
 }

@@ -9,11 +9,11 @@ import UIKit
 
 class LoginController: UIViewController {
     @IBOutlet private var imgView: UIImageView!
-    @IBOutlet private var txtFieldMobile: UITextField!
+    @IBOutlet private var txtFieldMobile: SKTextField!
     @IBOutlet private var btnSignIn: UIButton! {
         didSet {self.btnSignIn.isEnabled(false) }
     }
-    
+    let maxNumberOfCharacters = 16
     let loginVM = LoginVM()
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,7 +31,7 @@ class LoginController: UIViewController {
 extension LoginController {
     private func configUI() {
         self.imgView.layer.cornerRadius = self.imgView.height / 2
-        hideKeyboardWhenTappedAround()
+        self.hideKeyboardWhenTappedAround()
         self.validationListener()
         self.txtFieldMobile.addTarget(self, action: #selector(handleTextFieldChange(textField:)), for: .editingChanged)
     }
@@ -45,7 +45,6 @@ extension LoginController {
     //MARK: Listener
     fileprivate func validationListener() {
         self.loginVM.isValidListener = {[weak self] (isValid) in
-            Log.print(isValid)
             guard let weakSelf = self else { return }
             weakSelf.btnSignIn.isEnabled(isValid)
         }
@@ -54,6 +53,7 @@ extension LoginController {
 //        }
     }
 }
+
 //MARK: ====> Button Action <====
 extension LoginController {
     @IBAction func clickOnBack() {
@@ -61,6 +61,12 @@ extension LoginController {
     }
     @IBAction func clickOnSignin(_ sender: UIButton) {
         let otpView = OTPController.instantiate()
+        otpView.mobileNumebr = Observer(txtFieldMobile.text!)
         self.PUSH(otpView)
+    }
+}
+extension LoginController: UITextFieldDelegate {
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        return self.txtFieldMobile.verifyFields(shouldChangeCharactersIn: range, replacementString: string, vType: .phoneNumber)
     }
 }
