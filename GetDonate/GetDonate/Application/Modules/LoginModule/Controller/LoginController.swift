@@ -8,7 +8,7 @@
 import UIKit
 
 class LoginController: UIViewController {
-    @IBOutlet private var imgView: UIImageView!
+    @IBOutlet private var txtCCode: SKTextField!
     @IBOutlet private var txtFieldMobile: SKTextField!
     @IBOutlet private var btnSignIn: UIButton! {
         didSet {self.btnSignIn.isEnabled(false) }
@@ -26,20 +26,32 @@ class LoginController: UIViewController {
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
     }
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        self.txtCCode.layer.addBorder(edge: .right, color: Color.txtFieldBorderColor)
+    }
 }
 //MARK: ===>Config<===
 extension LoginController {
     private func configUI() {
-        self.imgView.layer.cornerRadius = self.imgView.height / 2
         self.hideKeyboardWhenTappedAround()
         self.validationListener()
-        self.txtFieldMobile.addTarget(self, action: #selector(handleTextFieldChange(textField:)), for: .editingChanged)
+        let _ = [txtFieldMobile, txtCCode].map {
+            $0.addTarget(self, action: #selector(handleTextFieldChange(textField:)), for: .editingChanged)
+        }
     }
     @objc func handleTextFieldChange(textField: UITextField) {
-        if textField == txtFieldMobile {
+        switch textField {
+        case txtFieldMobile:
             if let txt = textField.text {
                 self.loginVM.mobileNo = Observer(txt)
             }
+        case txtCCode:
+            if let txt = textField.text {
+                self.loginVM.countryCode = Observer(txt)
+            }
+        default:
+            break
         }
     }
     //MARK: Listener
@@ -53,7 +65,24 @@ extension LoginController {
 //        }
     }
 }
-
+//MARK: Handle API Response
+extension LoginController {
+    private func handleLoginResponse() {
+        self.loginVM.onSuccess = { response in
+            switch response {
+            case .success(result: let json):
+                let _ = json
+            case .failure(let error):
+                switch error {
+                case .network(string: let msg),
+                     .parser(string: let msg), .custom(string: let msg):
+                    self.showPopup(message: msg) {}
+                default: break
+                }
+            }
+        }
+    }
+}
 //MARK: ====> Button Action <====
 extension LoginController {
     @IBAction func clickOnBack() {
@@ -64,7 +93,16 @@ extension LoginController {
         otpView.mobileNumebr = Observer(txtFieldMobile.text!)
         self.PUSH(otpView)
     }
+    @IBAction func clickOnDialCode(_ sender: UIButton) {
+        let dialVC = DialCountriesController {[weak self] (country) in
+            guard let weakSelf = self else { return }
+            weakSelf.loginVM.countryCode = Observer(country.dialCode!)
+            weakSelf.txtCCode.text = country.dialCode
+        }
+        dialVC.show(vc: self)
+    }
 }
+//MARK: Validate TextField
 extension LoginController: UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         return self.txtFieldMobile.verifyFields(shouldChangeCharactersIn: range, replacementString: string, vType: .phoneNumber)

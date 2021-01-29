@@ -14,9 +14,7 @@ class OTPController: UIViewController {
     @IBOutlet weak var btnVerify: UIButton! {
         didSet { self.btnVerify.isEnabled(false) }
     }
-    @IBOutlet weak var btnResend: UIButton! {
-        didSet { self.btnResend.backgroundColor = .color(.white, withAlpha: 0.2) }
-    }
+    @IBOutlet weak var btnResend: UIButton!
     lazy var mobileNumebr: Observer<String> = {
         return Observer(.kEMPTY)
     }()
@@ -31,11 +29,11 @@ class OTPController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.navigationBarClear()
-        self.countDownFire()
+        //self.countDownFire()
     }
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        self.stopTimer()
+        //self.stopTimer()
     }
 }
 //MARK: Configuration
@@ -47,7 +45,7 @@ extension OTPController {
             self.btnVerify.isEnabled(otpString.length == 4)
         }
         self.mobileNumebr.bindAndFire {
-            self.lblMessage.text = "Verification code has been sent to \($0) \n if not Resend."
+            self.lblMessage.text = "We have send a OTP on your number \($0)."
         }
     }
     //MARK: Start Count Down Timer
@@ -63,7 +61,7 @@ extension OTPController {
                     self.btnResend.layoutIfNeeded()
                 }
             } else {
-                self.stopTimer()
+               // self.stopTimer()
                 self.btnResend.isEnabled(true)
                 self.btnResend.titleLabel?.font = Font.Bold.of(size: 18)
                 self.btnResend.setTitle("Resend OTP", for: .normal)

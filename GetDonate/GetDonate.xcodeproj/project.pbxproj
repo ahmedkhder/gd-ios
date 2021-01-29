@@ -27,6 +27,14 @@
 		F041296A25A7FB6C0011A8AB /* RoomWatchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F041296825A7FB6C0011A8AB /* RoomWatchCell.xib */; };
 		F0463A8525AF549D00BBE47A /* DonationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0463A8425AF549D00BBE47A /* DonationController.swift */; };
 		F0463A8D25AF54C200BBE47A /* DonationVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0463A8C25AF54C200BBE47A /* DonationVM.swift */; };
+		F04B65D125C13C700025DEC7 /* String+Numbers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04B65C725C13C700025DEC7 /* String+Numbers.swift */; };
+		F04B65D225C13C700025DEC7 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04B65C825C13C700025DEC7 /* Config.swift */; };
+		F04B65D325C13C700025DEC7 /* CountriesFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04B65C925C13C700025DEC7 /* CountriesFetcher.swift */; };
+		F04B65D425C13C700025DEC7 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04B65CB25C13C700025DEC7 /* Country.swift */; };
+		F04B65D525C13C700025DEC7 /* countries.json in Resources */ = {isa = PBXBuildFile; fileRef = F04B65CD25C13C700025DEC7 /* countries.json */; };
+		F04B65D625C13C700025DEC7 /* DialCountriesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04B65CF25C13C700025DEC7 /* DialCountriesController.swift */; };
+		F04B65D725C13C700025DEC7 /* CountriesAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04B65D025C13C700025DEC7 /* CountriesAdapter.swift */; };
+		F04B65E825C141850025DEC7 /* ChooseRoomController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04B65E725C141850025DEC7 /* ChooseRoomController.swift */; };
 		F05C77B925BF2885007CAE36 /* GDFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05C77B825BF2885007CAE36 /* GDFont.swift */; };
 		F06D734725A4AE3D00F777EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F06D734525A4AE3D00F777EB /* Main.storyboard */; };
 		F06D734A25A4AE3D00F777EB /* GetDonate.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F06D734825A4AE3D00F777EB /* GetDonate.xcdatamodeld */; };
@@ -70,6 +78,10 @@
 		F06D742625A4B52200F777EB /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06D742525A4B52200F777EB /* LoginController.swift */; };
 		F06D742E25A4B58D00F777EB /* LoginVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06D742D25A4B58D00F777EB /* LoginVM.swift */; };
 		F06D745B25A4BF2C00F777EB /* Observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06D745A25A4BF2C00F777EB /* Observer.swift */; };
+		F0805D1625C3A74000D2659E /* ChooseVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0805D1525C3A74000D2659E /* ChooseVM.swift */; };
+		F0805D1D25C3A8DD00D2659E /* ChooseRoomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0805D1B25C3A8DD00D2659E /* ChooseRoomCell.swift */; };
+		F0805D1E25C3A8DD00D2659E /* ChooseRoomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0805D1C25C3A8DD00D2659E /* ChooseRoomCell.xib */; };
+		F0805D2325C3B7C300D2659E /* temp.png in Resources */ = {isa = PBXBuildFile; fileRef = F0805D2225C3B7C300D2659E /* temp.png */; };
 		F0F9CC0D25AA0EA000DA706A /* OTPController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F9CC0C25AA0EA000DA706A /* OTPController.swift */; };
 		F0F9CC1725AA0F0700DA706A /* OtpVm.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F9CC1625AA0F0700DA706A /* OtpVm.swift */; };
 		F0F9CC1C25AA0F2400DA706A /* OtpM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F9CC1B25AA0F2400DA706A /* OtpM.swift */; };
@@ -122,6 +134,14 @@
 		F041296825A7FB6C0011A8AB /* RoomWatchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoomWatchCell.xib; sourceTree = "<group>"; };
 		F0463A8425AF549D00BBE47A /* DonationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationController.swift; sourceTree = "<group>"; };
 		F0463A8C25AF54C200BBE47A /* DonationVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationVM.swift; sourceTree = "<group>"; };
+		F04B65C725C13C700025DEC7 /* String+Numbers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Numbers.swift"; sourceTree = "<group>"; };
+		F04B65C825C13C700025DEC7 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		F04B65C925C13C700025DEC7 /* CountriesFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountriesFetcher.swift; sourceTree = "<group>"; };
+		F04B65CB25C13C700025DEC7 /* Country.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		F04B65CD25C13C700025DEC7 /* countries.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = countries.json; sourceTree = "<group>"; };
+		F04B65CF25C13C700025DEC7 /* DialCountriesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialCountriesController.swift; sourceTree = "<group>"; };
+		F04B65D025C13C700025DEC7 /* CountriesAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountriesAdapter.swift; sourceTree = "<group>"; };
+		F04B65E725C141850025DEC7 /* ChooseRoomController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseRoomController.swift; sourceTree = "<group>"; };
 		F05C77B825BF2885007CAE36 /* GDFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDFont.swift; sourceTree = "<group>"; };
 		F06D733C25A4AE3D00F777EB /* GetDonate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GetDonate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F06D734625A4AE3D00F777EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -171,6 +191,10 @@
 		F06D742525A4B52200F777EB /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		F06D742D25A4B58D00F777EB /* LoginVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVM.swift; sourceTree = "<group>"; };
 		F06D745A25A4BF2C00F777EB /* Observer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Observer.swift; sourceTree = "<group>"; };
+		F0805D1525C3A74000D2659E /* ChooseVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseVM.swift; sourceTree = "<group>"; };
+		F0805D1B25C3A8DD00D2659E /* ChooseRoomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseRoomCell.swift; sourceTree = "<group>"; };
+		F0805D1C25C3A8DD00D2659E /* ChooseRoomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChooseRoomCell.xib; sourceTree = "<group>"; };
+		F0805D2225C3B7C300D2659E /* temp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = temp.png; sourceTree = "<group>"; };
 		F0F9CC0C25AA0EA000DA706A /* OTPController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPController.swift; sourceTree = "<group>"; };
 		F0F9CC1625AA0F0700DA706A /* OtpVm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtpVm.swift; sourceTree = "<group>"; };
 		F0F9CC1B25AA0F2400DA706A /* OtpM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtpM.swift; sourceTree = "<group>"; };
@@ -368,6 +392,86 @@
 			path = DonationController;
 			sourceTree = "<group>";
 		};
+		F04B65C525C13C700025DEC7 /* DialCountries */ = {
+			isa = PBXGroup;
+			children = (
+				F04B65C625C13C700025DEC7 /* Core */,
+				F04B65CA25C13C700025DEC7 /* Module */,
+				F04B65CC25C13C700025DEC7 /* Resources */,
+				F04B65CE25C13C700025DEC7 /* Views */,
+			);
+			path = DialCountries;
+			sourceTree = "<group>";
+		};
+		F04B65C625C13C700025DEC7 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				F04B65C725C13C700025DEC7 /* String+Numbers.swift */,
+				F04B65C825C13C700025DEC7 /* Config.swift */,
+				F04B65C925C13C700025DEC7 /* CountriesFetcher.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		F04B65CA25C13C700025DEC7 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				F04B65CB25C13C700025DEC7 /* Country.swift */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		F04B65CC25C13C700025DEC7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F04B65CD25C13C700025DEC7 /* countries.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F04B65CE25C13C700025DEC7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F04B65CF25C13C700025DEC7 /* DialCountriesController.swift */,
+				F04B65D025C13C700025DEC7 /* CountriesAdapter.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F04B65DB25C140460025DEC7 /* WatchModule */ = {
+			isa = PBXGroup;
+			children = (
+				F0805D1A25C3A8B600D2659E /* Cell */,
+				F04B65E625C141850025DEC7 /* ChooseRoomController */,
+				F04B65E425C1416B0025DEC7 /* ChooseM */,
+				F04B65E525C1416C0025DEC7 /* ChooseVM */,
+			);
+			path = WatchModule;
+			sourceTree = "<group>";
+		};
+		F04B65E425C1416B0025DEC7 /* ChooseM */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ChooseM;
+			sourceTree = "<group>";
+		};
+		F04B65E525C1416C0025DEC7 /* ChooseVM */ = {
+			isa = PBXGroup;
+			children = (
+				F0805D1525C3A74000D2659E /* ChooseVM.swift */,
+			);
+			path = ChooseVM;
+			sourceTree = "<group>";
+		};
+		F04B65E625C141850025DEC7 /* ChooseRoomController */ = {
+			isa = PBXGroup;
+			children = (
+				F04B65E725C141850025DEC7 /* ChooseRoomController.swift */,
+			);
+			path = ChooseRoomController;
+			sourceTree = "<group>";
+		};
 		F06D733325A4AE3D00F777EB = {
 			isa = PBXGroup;
 			children = (
@@ -437,6 +541,7 @@
 		F06D738925A4AF0900F777EB /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				F0805D2225C3B7C300D2659E /* temp.png */,
 				F041295525A7F9210011A8AB /* Protocols */,
 				F06D738D25A4AF8C00F777EB /* Modules */,
 				F06D739125A4AF8C00F777EB /* UI */,
@@ -447,6 +552,7 @@
 		F06D738D25A4AF8C00F777EB /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				F04B65DB25C140460025DEC7 /* WatchModule */,
 				F0463A8125AF548600BBE47A /* DonationModule */,
 				F041293925A767B90011A8AB /* WelcomeController */,
 				F06D738F25A4AF8C00F777EB /* LoginModule */,
@@ -723,6 +829,15 @@
 			path = LoginVM;
 			sourceTree = "<group>";
 		};
+		F0805D1A25C3A8B600D2659E /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F0805D1B25C3A8DD00D2659E /* ChooseRoomCell.swift */,
+				F0805D1C25C3A8DD00D2659E /* ChooseRoomCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		F0F9CC0B25AA0E6D00DA706A /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -750,6 +865,7 @@
 		F0F9CC2225AAE04400DA706A /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				F04B65C525C13C700025DEC7 /* DialCountries */,
 				F0F9CC2325AAE04400DA706A /* OTPView */,
 			);
 			path = Helper;
@@ -877,8 +993,11 @@
 				F041292D25A755DE0011A8AB /* Roboto-Medium.ttf in Resources */,
 				F06D734F25A4AE4100F777EB /* LaunchScreen.storyboard in Resources */,
 				F041293225A755DE0011A8AB /* Roboto-Black.ttf in Resources */,
+				F0805D2325C3B7C300D2659E /* temp.png in Resources */,
 				F041296A25A7FB6C0011A8AB /* RoomWatchCell.xib in Resources */,
 				F041292E25A755DE0011A8AB /* Roboto-Light.ttf in Resources */,
+				F04B65D525C13C700025DEC7 /* countries.json in Resources */,
+				F0805D1E25C3A8DD00D2659E /* ChooseRoomCell.xib in Resources */,
 				F06D734C25A4AE4100F777EB /* Assets.xcassets in Resources */,
 				F06D734725A4AE3D00F777EB /* Main.storyboard in Resources */,
 			);
@@ -1014,9 +1133,14 @@
 				F06D73FF25A4B15B00F777EB /* GDEnum.swift in Sources */,
 				F06D73DD25A4B07600F777EB /* Image+Letters.swift in Sources */,
 				F031846C25A8B45B0063856B /* InTheRoomM.swift in Sources */,
+				F04B65D325C13C700025DEC7 /* CountriesFetcher.swift in Sources */,
+				F04B65D425C13C700025DEC7 /* Country.swift in Sources */,
 				F06D742625A4B52200F777EB /* LoginController.swift in Sources */,
+				F04B65D125C13C700025DEC7 /* String+Numbers.swift in Sources */,
 				F031846225A8B4350063856B /* InTheRoomController.swift in Sources */,
 				F041294C25A7F82D0011A8AB /* RoomWatchController.swift in Sources */,
+				F04B65D725C13C700025DEC7 /* CountriesAdapter.swift in Sources */,
+				F04B65E825C141850025DEC7 /* ChooseRoomController.swift in Sources */,
 				F0F9CC1C25AA0F2400DA706A /* OtpM.swift in Sources */,
 				F06D741A25A4B40000F777EB /* DataDecodable.swift in Sources */,
 				F06D73D225A4B07600F777EB /* MyUtility.swift in Sources */,
@@ -1025,6 +1149,7 @@
 				F06D73D425A4B07600F777EB /* SKButton.swift in Sources */,
 				F06D741D25A4B40000F777EB /* HTTPHeaders.swift in Sources */,
 				F041295125A7F8B30011A8AB /* RoomWatchVM.swift in Sources */,
+				F04B65D625C13C700025DEC7 /* DialCountriesController.swift in Sources */,
 				F0F9CC2525AAE04400DA706A /* OTPView.swift in Sources */,
 				F06D73E025A4B07600F777EB /* DataType+Ext.swift in Sources */,
 				F06D742E25A4B58D00F777EB /* LoginVM.swift in Sources */,
@@ -1044,15 +1169,18 @@
 				F06D741725A4B40000F777EB /* HTTPMethod.swift in Sources */,
 				F06D73E425A4B07600F777EB /* SKImagePicker.swift in Sources */,
 				F06D741B25A4B40000F777EB /* HTTPRequestData.swift in Sources */,
+				F04B65D225C13C700025DEC7 /* Config.swift in Sources */,
 				F041295725A7F9450011A8AB /* Protocols.swift in Sources */,
 				F06D741825A4B40000F777EB /* EndPoints.swift in Sources */,
 				F06D740425A4B18000F777EB /* GDColor.swift in Sources */,
 				F05C77B925BF2885007CAE36 /* GDFont.swift in Sources */,
+				F0805D1625C3A74000D2659E /* ChooseVM.swift in Sources */,
 				F06D73DC25A4B07600F777EB /* Navigation+Extension.swift in Sources */,
 				F06D73DE25A4B07600F777EB /* UIImage+Extension.swift in Sources */,
 				F06D737725A4AEA400F777EB /* AppDelegate.swift in Sources */,
 				F041296925A7FB6C0011A8AB /* RoomWatchCell.swift in Sources */,
 				F06D73E225A4B07600F777EB /* NSUserDefaults.swift in Sources */,
+				F0805D1D25C3A8DD00D2659E /* ChooseRoomCell.swift in Sources */,
 				F06D73E125A4B07600F777EB /* String+Ext.swift in Sources */,
 				F06D73D625A4B07600F777EB /* Spinner.swift in Sources */,
 				F031847325A8B5330063856B /* InTheRoomCell.swift in Sources */,

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Medium.ttf">
+            <string>Roboto-Medium</string>
+        </array>
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="161" id="KGk-i7-Jjw" customClass="ChooseRoomCell" customModule="GetDonate" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="160"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="160"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gBM-3q-J69" customClass="SKView" customModule="GetDonate" customModuleProvider="target">
+                        <rect key="frame" x="10" y="5" width="300" height="150"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="temp.png" translatesAutoresizingMaskIntoConstraints="NO" id="aTj-Ii-mVe">
+                                <rect key="frame" x="8" y="8" width="150" height="134"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="2PS-9q-YLp"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="makeRounded">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Donate for school" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="roV-2k-K8o">
+                                <rect key="frame" x="166" y="10" width="126" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="RLV-gi-TFt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OUH-Uk-Rez">
+                                <rect key="frame" x="166" y="46" width="126" height="56"/>
+                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="13"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zfC-Gm-687" customClass="SKView" customModule="GetDonate" customModuleProvider="target">
+                                <rect key="frame" x="166" y="110" width="126" height="32"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Donate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="So1-6D-9Yf">
+                                        <rect key="frame" x="8" y="6" width="45" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="45" id="yjJ-cs-KPT"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$5,000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8VN-OD-1Wp">
+                                        <rect key="frame" x="57" y="4" width="65" height="24"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="16"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.13197969543147203" green="0.13197969543147203" blue="0.13197969543147203" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="8VN-OD-1Wp" secondAttribute="bottom" constant="4" id="4MO-3R-oHp"/>
+                                    <constraint firstAttribute="trailing" secondItem="8VN-OD-1Wp" secondAttribute="trailing" constant="4" id="CDW-HC-iY1"/>
+                                    <constraint firstAttribute="bottom" secondItem="So1-6D-9Yf" secondAttribute="bottom" constant="6" id="CQ7-nb-Pk8"/>
+                                    <constraint firstItem="8VN-OD-1Wp" firstAttribute="top" secondItem="zfC-Gm-687" secondAttribute="top" constant="4" id="VFQ-oq-2Ve"/>
+                                    <constraint firstItem="So1-6D-9Yf" firstAttribute="top" secondItem="zfC-Gm-687" secondAttribute="top" constant="6" id="WBd-VP-IWd"/>
+                                    <constraint firstAttribute="height" constant="32" id="eAv-ut-Rt7"/>
+                                    <constraint firstItem="8VN-OD-1Wp" firstAttribute="leading" secondItem="So1-6D-9Yf" secondAttribute="trailing" constant="4" id="pXF-UW-xj5"/>
+                                    <constraint firstItem="So1-6D-9Yf" firstAttribute="leading" secondItem="zfC-Gm-687" secondAttribute="leading" constant="8" id="xVx-jM-WvL"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WQp-rR-FzI" customClass="SKButton" customModule="GetDonate" customModuleProvider="target">
+                                <rect key="frame" x="118" y="102" width="36" height="36"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="36" id="4Q8-k3-xqJ"/>
+                                    <constraint firstAttribute="height" constant="36" id="woE-Cq-tuQ"/>
+                                </constraints>
+                                <state key="normal" image="padlock"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusBtn">
+                                        <real key="value" value="18"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="rippleColor">
+                                        <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="rippleBackgroundColor">
+                                        <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="aTj-Ii-mVe" firstAttribute="top" secondItem="gBM-3q-J69" secondAttribute="top" constant="8" id="2Xa-hy-Khs"/>
+                            <constraint firstAttribute="trailing" secondItem="OUH-Uk-Rez" secondAttribute="trailing" constant="8" id="4AR-4z-Syx"/>
+                            <constraint firstItem="zfC-Gm-687" firstAttribute="leading" secondItem="aTj-Ii-mVe" secondAttribute="trailing" constant="8" symbolic="YES" id="6ZF-EZ-QAc"/>
+                            <constraint firstItem="aTj-Ii-mVe" firstAttribute="leading" secondItem="gBM-3q-J69" secondAttribute="leading" constant="8" id="Adp-8I-Jpb"/>
+                            <constraint firstItem="OUH-Uk-Rez" firstAttribute="leading" secondItem="WQp-rR-FzI" secondAttribute="trailing" constant="12" id="M5h-3G-wc0"/>
+                            <constraint firstAttribute="bottom" secondItem="zfC-Gm-687" secondAttribute="bottom" constant="8" id="MlN-UK-4sP"/>
+                            <constraint firstAttribute="bottom" secondItem="WQp-rR-FzI" secondAttribute="bottom" constant="12" id="P8L-sw-ss5"/>
+                            <constraint firstItem="OUH-Uk-Rez" firstAttribute="leading" secondItem="aTj-Ii-mVe" secondAttribute="trailing" constant="8" symbolic="YES" id="SfG-vV-Bng"/>
+                            <constraint firstItem="roV-2k-K8o" firstAttribute="top" secondItem="gBM-3q-J69" secondAttribute="top" constant="10" id="Y8p-0d-IVz"/>
+                            <constraint firstItem="roV-2k-K8o" firstAttribute="leading" secondItem="aTj-Ii-mVe" secondAttribute="trailing" constant="8" symbolic="YES" id="aL1-KE-k0b"/>
+                            <constraint firstAttribute="trailing" secondItem="roV-2k-K8o" secondAttribute="trailing" constant="8" id="eqB-85-R4A"/>
+                            <constraint firstAttribute="trailing" secondItem="zfC-Gm-687" secondAttribute="trailing" constant="8" id="fq0-MF-hTt"/>
+                            <constraint firstItem="zfC-Gm-687" firstAttribute="top" secondItem="OUH-Uk-Rez" secondAttribute="bottom" constant="8" id="mQT-y4-wcQ"/>
+                            <constraint firstItem="OUH-Uk-Rez" firstAttribute="top" secondItem="roV-2k-K8o" secondAttribute="bottom" id="pPO-mf-FF3"/>
+                            <constraint firstAttribute="bottom" secondItem="aTj-Ii-mVe" secondAttribute="bottom" constant="8" id="vBM-7X-mGe"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="8"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="alphaBg">
+                                <real key="value" value="0.81999999999999995"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="gBM-3q-J69" secondAttribute="bottom" constant="5" id="7Ka-dn-REi"/>
+                    <constraint firstAttribute="trailing" secondItem="gBM-3q-J69" secondAttribute="trailing" constant="10" id="7sk-fd-Elk"/>
+                    <constraint firstItem="gBM-3q-J69" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="V2F-Ur-0W7"/>
+                    <constraint firstItem="gBM-3q-J69" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="XeS-gN-PMi"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="btnLock" destination="WQp-rR-FzI" id="ma5-N2-AeG"/>
+                <outlet property="imgView" destination="aTj-Ii-mVe" id="eDu-yQ-JgW"/>
+                <outlet property="lblAmount" destination="8VN-OD-1Wp" id="2V2-cr-zos"/>
+                <outlet property="lblDesc" destination="OUH-Uk-Rez" id="07p-5R-bwM"/>
+                <outlet property="lblRoomName" destination="roV-2k-K8o" id="rGM-ko-qcZ"/>
+            </connections>
+            <point key="canvasLocation" x="18.840579710144929" y="138.95089285714286"/>
+        </tableViewCell>
+    </objects>
+    <designables>
+        <designable name="WQp-rR-FzI">
+            <size key="intrinsicContentSize" width="16" height="22"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="padlock" width="16" height="16"/>
+        <image name="temp.png" width="153" height="153"/>
+    </resources>
+</document>

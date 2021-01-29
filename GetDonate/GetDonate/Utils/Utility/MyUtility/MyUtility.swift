@@ -446,7 +446,7 @@ extension UISearchBar {
 open class MyUtility: NSObject {
     
     //MARK: =====: 1 : Check Network :=====
-    static var isNetwork: Bool {
+    static var isNetworkAvailable: Bool {
         
         let connectionMode = try? Reachability().connection
         switch connectionMode {

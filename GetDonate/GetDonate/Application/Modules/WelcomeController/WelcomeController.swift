@@ -20,7 +20,8 @@ class WelcomeController: UIViewController {
 //MARK: Button Action
 extension WelcomeController {
     @IBAction func clickOnWatch() {
-       //TODO: 
+        let cooseRoomVC = ChooseRoomController.instantiate()
+        PUSH(cooseRoomVC)
     }
     @IBAction func clickOnGo() {
         let loginVC = LoginController.instantiate()

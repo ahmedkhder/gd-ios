@@ -100,7 +100,7 @@ public struct URLSessionNetworkDispatcher: NetworkDispatcher {
 //----------------- WITHOUT CODABLE -------------------
 //######################################################
 //Request Type
-public protocol DataRequestType {
+public protocol DataRequest {
     var dataRequest: RequestData { get }
 }
 
