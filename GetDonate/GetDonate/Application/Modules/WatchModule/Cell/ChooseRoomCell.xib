@@ -58,7 +58,7 @@
                                 <rect key="frame" x="166" y="110" width="126" height="32"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Donate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="So1-6D-9Yf">
-                                        <rect key="frame" x="8" y="6" width="45" height="20"/>
+                                        <rect key="frame" x="16" y="6" width="45" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="45" id="yjJ-cs-KPT"/>
                                         </constraints>
@@ -66,8 +66,8 @@
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$5,000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8VN-OD-1Wp">
-                                        <rect key="frame" x="57" y="4" width="65" height="24"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$5,000" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8VN-OD-1Wp">
+                                        <rect key="frame" x="77" y="4" width="45" height="24"/>
                                         <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="16"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -81,8 +81,8 @@
                                     <constraint firstItem="8VN-OD-1Wp" firstAttribute="top" secondItem="zfC-Gm-687" secondAttribute="top" constant="4" id="VFQ-oq-2Ve"/>
                                     <constraint firstItem="So1-6D-9Yf" firstAttribute="top" secondItem="zfC-Gm-687" secondAttribute="top" constant="6" id="WBd-VP-IWd"/>
                                     <constraint firstAttribute="height" constant="32" id="eAv-ut-Rt7"/>
-                                    <constraint firstItem="8VN-OD-1Wp" firstAttribute="leading" secondItem="So1-6D-9Yf" secondAttribute="trailing" constant="4" id="pXF-UW-xj5"/>
-                                    <constraint firstItem="So1-6D-9Yf" firstAttribute="leading" secondItem="zfC-Gm-687" secondAttribute="leading" constant="8" id="xVx-jM-WvL"/>
+                                    <constraint firstItem="8VN-OD-1Wp" firstAttribute="leading" secondItem="So1-6D-9Yf" secondAttribute="trailing" constant="16" id="pXF-UW-xj5"/>
+                                    <constraint firstItem="So1-6D-9Yf" firstAttribute="leading" secondItem="zfC-Gm-687" secondAttribute="leading" constant="16" id="xVx-jM-WvL"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">

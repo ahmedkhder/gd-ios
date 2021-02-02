@@ -347,7 +347,7 @@ extension UIButton {
         self.tintColor = color // set a color
     }
     
-    public func indicator(isVisible: Bool, color: UIColor = .white, alpha: CGFloat = 1) {
+    public func indicator(isVisible: Bool, color: UIColor = .black, alpha: CGFloat = 1) {
         let tag = -808404
         if isVisible {
             UIButton._buttonTitle = self.titleLabel?.text ?? ""

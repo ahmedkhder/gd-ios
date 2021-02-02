@@ -9,6 +9,10 @@ import Foundation
 import SDWebImage
 
 extension String {
+    static let LOGIN_INFO = "LoginInfo"
+}
+
+extension String {
     static let kEMPTY           = ""
     static let kNO_DATA         = "Data not found"
     static let kUNKOWN          = "Something went wrong, please try again."
@@ -67,3 +71,10 @@ extension NSLayoutConstraint {
         }
     }
 }
+
+//MARK: Int
+extension Int {
+    static let CODE_200 = 200 // Success
+    static let CODE_400 = 400 //user not found
+}
+

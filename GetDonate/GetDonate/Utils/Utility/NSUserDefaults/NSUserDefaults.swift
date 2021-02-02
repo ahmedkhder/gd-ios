@@ -37,7 +37,7 @@ extension NSUserDefaults {
         let archivedPool = try? NSKeyedArchiver.archivedData(withRootObject: value, requiringSecureCoding: true)
         standard.set(archivedPool, forKey: key)
     }
-    static func getData<T>(key: String) -> T? {
+    static func getData<T>(key: String) -> T? where T: Any {
         if let val = standard.value(forKey: key) as? Data,
            let obj = try? NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(val) as? T {
             return obj

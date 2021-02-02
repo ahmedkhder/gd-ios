@@ -69,9 +69,17 @@ extension LoginController {
 extension LoginController {
     private func handleLoginResponse() {
         self.loginVM.onSuccess = { response in
+            MainQueue.async {
+                self.btnSignIn.indicator(isVisible: false)
+            }
             switch response {
             case .success(result: let json):
                 let _ = json
+                MainQueue.async {
+                    let otpView = OTPController.instantiate()
+                    otpView.mobileNumebr = Observer(self.txtFieldMobile.text!)
+                    self.PUSH(otpView)
+                }
             case .failure(let error):
                 switch error {
                 case .network(string: let msg),
@@ -89,9 +97,9 @@ extension LoginController {
         POP()
     }
     @IBAction func clickOnSignin(_ sender: UIButton) {
-        let otpView = OTPController.instantiate()
-        otpView.mobileNumebr = Observer(txtFieldMobile.text!)
-        self.PUSH(otpView)
+        self.handleLoginResponse()
+        self.btnSignIn.indicator(isVisible: true)
+        self.loginVM.requestLogin()
     }
     @IBAction func clickOnDialCode(_ sender: UIButton) {
         let dialVC = DialCountriesController {[weak self] (country) in

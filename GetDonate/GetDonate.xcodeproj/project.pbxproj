@@ -13,6 +13,9 @@
 		F031846725A8B4450063856B /* InTheRoomVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F031846625A8B4450063856B /* InTheRoomVM.swift */; };
 		F031846C25A8B45B0063856B /* InTheRoomM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F031846B25A8B45B0063856B /* InTheRoomM.swift */; };
 		F031847325A8B5330063856B /* InTheRoomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F031847125A8B5330063856B /* InTheRoomCell.swift */; };
+		F034C09B25C6D4C0004E0344 /* AppConstantKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = F034C09A25C6D4C0004E0344 /* AppConstantKeys.swift */; };
+		F034C0A125C6DA49004E0344 /* ShareManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F034C0A025C6DA48004E0344 /* ShareManager.swift */; };
+		F034C0B325C6E133004E0344 /* LoginM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F034C0B225C6E132004E0344 /* LoginM.swift */; };
 		F041292D25A755DE0011A8AB /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F041292725A755DE0011A8AB /* Roboto-Medium.ttf */; };
 		F041292E25A755DE0011A8AB /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F041292825A755DE0011A8AB /* Roboto-Light.ttf */; };
 		F041292F25A755DE0011A8AB /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F041292925A755DE0011A8AB /* Roboto-Regular.ttf */; };
@@ -82,6 +85,7 @@
 		F0805D1D25C3A8DD00D2659E /* ChooseRoomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0805D1B25C3A8DD00D2659E /* ChooseRoomCell.swift */; };
 		F0805D1E25C3A8DD00D2659E /* ChooseRoomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0805D1C25C3A8DD00D2659E /* ChooseRoomCell.xib */; };
 		F0805D2325C3B7C300D2659E /* temp.png in Resources */ = {isa = PBXBuildFile; fileRef = F0805D2225C3B7C300D2659E /* temp.png */; };
+		F0C8BE8125C6EFD80000A30F /* GDParseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C8BE8025C6EFD80000A30F /* GDParseData.swift */; };
 		F0F9CC0D25AA0EA000DA706A /* OTPController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F9CC0C25AA0EA000DA706A /* OTPController.swift */; };
 		F0F9CC1725AA0F0700DA706A /* OtpVm.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F9CC1625AA0F0700DA706A /* OtpVm.swift */; };
 		F0F9CC1C25AA0F2400DA706A /* OtpM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F9CC1B25AA0F2400DA706A /* OtpM.swift */; };
@@ -120,6 +124,9 @@
 		F031846625A8B4450063856B /* InTheRoomVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InTheRoomVM.swift; sourceTree = "<group>"; };
 		F031846B25A8B45B0063856B /* InTheRoomM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InTheRoomM.swift; sourceTree = "<group>"; };
 		F031847125A8B5330063856B /* InTheRoomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InTheRoomCell.swift; sourceTree = "<group>"; };
+		F034C09A25C6D4C0004E0344 /* AppConstantKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstantKeys.swift; sourceTree = "<group>"; };
+		F034C0A025C6DA48004E0344 /* ShareManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareManager.swift; sourceTree = "<group>"; };
+		F034C0B225C6E132004E0344 /* LoginM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginM.swift; sourceTree = "<group>"; };
 		F041292725A755DE0011A8AB /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		F041292825A755DE0011A8AB /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
 		F041292925A755DE0011A8AB /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
@@ -195,6 +202,7 @@
 		F0805D1B25C3A8DD00D2659E /* ChooseRoomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseRoomCell.swift; sourceTree = "<group>"; };
 		F0805D1C25C3A8DD00D2659E /* ChooseRoomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChooseRoomCell.xib; sourceTree = "<group>"; };
 		F0805D2225C3B7C300D2659E /* temp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = temp.png; sourceTree = "<group>"; };
+		F0C8BE8025C6EFD80000A30F /* GDParseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDParseData.swift; sourceTree = "<group>"; };
 		F0F9CC0C25AA0EA000DA706A /* OTPController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPController.swift; sourceTree = "<group>"; };
 		F0F9CC1625AA0F0700DA706A /* OtpVm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtpVm.swift; sourceTree = "<group>"; };
 		F0F9CC1B25AA0F2400DA706A /* OtpM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtpM.swift; sourceTree = "<group>"; };
@@ -293,6 +301,14 @@
 				F031847125A8B5330063856B /* InTheRoomCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		F034C09F25C6DA36004E0344 /* ShareManager */ = {
+			isa = PBXGroup;
+			children = (
+				F034C0A025C6DA48004E0344 /* ShareManager.swift */,
+			);
+			path = ShareManager;
 			sourceTree = "<group>";
 		};
 		F041292625A755DE0011A8AB /* Resources */ = {
@@ -503,6 +519,7 @@
 				F041292625A755DE0011A8AB /* Resources */,
 				F06D73EC25A4B09100F777EB /* NetworkLayer */,
 				F06D73ED25A4B0EE00F777EB /* AppConstant */,
+				F034C09F25C6DA36004E0344 /* ShareManager */,
 				F0F9CC2225AAE04400DA706A /* Helper */,
 				F06D734B25A4AE4100F777EB /* Assets.xcassets */,
 				F06D735025A4AE4100F777EB /* Info.plist */,
@@ -552,11 +569,11 @@
 		F06D738D25A4AF8C00F777EB /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				F06D738F25A4AF8C00F777EB /* LoginModule */,
+				F06D738E25A4AF8C00F777EB /* OTPModule */,
 				F04B65DB25C140460025DEC7 /* WatchModule */,
 				F0463A8125AF548600BBE47A /* DonationModule */,
 				F041293925A767B90011A8AB /* WelcomeController */,
-				F06D738F25A4AF8C00F777EB /* LoginModule */,
-				F06D738E25A4AF8C00F777EB /* OTPModule */,
 				F031845D25A8B2610063856B /* InTheRoomModule */,
 				F041293F25A7F2F70011A8AB /* RoomWatchModule */,
 			);
@@ -802,6 +819,8 @@
 				F06D73FE25A4B15B00F777EB /* GDEnum.swift */,
 				F06D740325A4B18000F777EB /* GDColor.swift */,
 				F05C77B825BF2885007CAE36 /* GDFont.swift */,
+				F034C09A25C6D4C0004E0344 /* AppConstantKeys.swift */,
+				F0C8BE8025C6EFD80000A30F /* GDParseData.swift */,
 			);
 			path = AppConstant;
 			sourceTree = "<group>";
@@ -809,6 +828,7 @@
 		F06D742225A4B4CF00F777EB /* LoginM */ = {
 			isa = PBXGroup;
 			children = (
+				F034C0B225C6E132004E0344 /* LoginM.swift */,
 			);
 			path = LoginM;
 			sourceTree = "<group>";
@@ -1153,7 +1173,9 @@
 				F0F9CC2525AAE04400DA706A /* OTPView.swift in Sources */,
 				F06D73E025A4B07600F777EB /* DataType+Ext.swift in Sources */,
 				F06D742E25A4B58D00F777EB /* LoginVM.swift in Sources */,
+				F0C8BE8125C6EFD80000A30F /* GDParseData.swift in Sources */,
 				F06D73F425A4B13800F777EB /* GDMessages.swift in Sources */,
+				F034C0A125C6DA49004E0344 /* ShareManager.swift in Sources */,
 				F06D741E25A4B40000F777EB /* Result.swift in Sources */,
 				F06D734A25A4AE3D00F777EB /* GetDonate.xcdatamodeld in Sources */,
 				F06D73D325A4B07600F777EB /* Toast.swift in Sources */,
@@ -1163,6 +1185,7 @@
 				F06D741C25A4B40000F777EB /* APIManager.swift in Sources */,
 				F06D73E525A4B07600F777EB /* SKLabel.swift in Sources */,
 				F0F9CC0D25AA0EA000DA706A /* OTPController.swift in Sources */,
+				F034C09B25C6D4C0004E0344 /* AppConstantKeys.swift in Sources */,
 				F06D73D925A4B07600F777EB /* CollectioView+Extension.swift in Sources */,
 				F0463A8525AF549D00BBE47A /* DonationController.swift in Sources */,
 				F041293B25A767EA0011A8AB /* WelcomeController.swift in Sources */,
@@ -1171,6 +1194,7 @@
 				F06D741B25A4B40000F777EB /* HTTPRequestData.swift in Sources */,
 				F04B65D225C13C700025DEC7 /* Config.swift in Sources */,
 				F041295725A7F9450011A8AB /* Protocols.swift in Sources */,
+				F034C0B325C6E133004E0344 /* LoginM.swift in Sources */,
 				F06D741825A4B40000F777EB /* EndPoints.swift in Sources */,
 				F06D740425A4B18000F777EB /* GDColor.swift in Sources */,
 				F05C77B925BF2885007CAE36 /* GDFont.swift in Sources */,

@@ -45,7 +45,7 @@ extension OTPController {
             self.btnVerify.isEnabled(otpString.length == 4)
         }
         self.mobileNumebr.bindAndFire {
-            self.lblMessage.text = "We have send a OTP on your number \($0)."
+            self.lblMessage.text = "We have send a OTP on your number\n\($0)"
         }
     }
     //MARK: Start Count Down Timer

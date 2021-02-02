@@ -46,9 +46,11 @@ extension LoginVM {
 
 extension LoginVM: DataRequest {
     var dataRequest: RequestData {
-        return RequestData(path: "",
+        let params = [J_KEYS.kEMAIL: "test1@gmail.com", J_KEYS.kPASSWORD: "12345"]
+        return RequestData(path: APIs.kLOGIN,
                            method: .post,
-                           params: [:], headers: [:])
+                           params: params,
+                           headers: HEADER_NON_AUTH)
     }
     func requestLogin() {
         guard MyUtility.isNetworkAvailable else {
@@ -56,13 +58,45 @@ extension LoginVM: DataRequest {
             return
         }
         execute(request: dataRequest, onSuccess: { (json) in
-            if json.count > 0 {
-                self.onSuccess?(Result.success(result: json))
-            } else {
-                self.onSuccess?(Result.failure(.parser(string: .kUNKOWN)))
+            guard json.count > 0 else {
+                self.onSuccess?(.failure(.parser(string: .kUNKOWN)))
+                return
             }
+            guard let code = json[J_KEYS.kCODE] as? Int, code == .CODE_200 else {
+                if let msg = json[J_KEYS.kMSG] as? String {
+                    self.onSuccess?(.failure(.parser(string: msg)))
+                }
+                return
+            }
+            guard let data = json[J_KEYS.kDATA] as? [String: Any] else {
+                return
+            }
+            let loginM = LoginM(json: json)
+            NSUserDefaults.set(encodable: loginM.data, forKey: .LOGIN_INFO)
+            self.onSuccess?(.success(result: data))
+            
         }, onError: { (error) in
-            self.onSuccess?(Result.failure(.custom(string: .kUNKOWN)))
+            self.onSuccess?(.failure(.custom(string: .kUNKOWN)))
         })
     }
 }
+/*
+ {
+     "status": true,
+     "code": 200,
+     "message": "success",
+     "data": {
+         "id": 3,
+         "email": "test1@gmail.com",
+         "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjMsImFsZyI6IlJTMjU2IiwiaXNzIjoiYWRtaW5AZ2QuY29tIiwic3ViIjoiYWRtaW5AZ2QuY29tIiwiYXVkIjoiaHR0cHM6Ly9pZGVudGl0eXRvb2xraXQuZ29vZ2xlYXBpcy5jb20vZ29vZ2xlLmlkZW50aXR5LmlkZW50aXR5dG9vbGtpdC52MS5JZGVudGl0eVRvb2xraXQiLCJpYXQiOjE2MTIwOTU0NTgsImV4cCI6MTY3NTE2NzQ1OCwiaXNfYWRtaW4iOnRydWUsImlzX3VzZXIiOmZhbHNlfQ.6yGnlVBABOcgm0-aP9l6AhSITdVdds_UWEWvIHbvo-4"
+     }
+ }
+ =======
+ {
+     "code": 400,
+     "isError": true,
+     "status": "Bad Request",
+     "message": "error user not found",
+     "data": null
+ }
+ */

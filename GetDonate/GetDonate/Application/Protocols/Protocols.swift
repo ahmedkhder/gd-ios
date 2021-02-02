@@ -8,6 +8,10 @@
 import Foundation
 import UIKit
 
+enum CellActionType {
+    case kThumb
+    case kHeart
+}
 //MARK: Config
  protocol ConfigList: class {
      associatedtype T
@@ -15,15 +19,18 @@ import UIKit
      func refreshData()
      var numberOfRow: Int { get }
  }
+//MARK: =====> Common Cell Delegate <=====
+protocol CellCommonDelegate: class {
+    func tableViewCell(_ cell: UITableViewCell, didPressOn action: CellActionType tag: Int)
+}
 
 
 class ChainedAnimationsQueue {
 
   private var playing = false
-  private var animations = [(TimeInterval, () -> Void, () -> Void)]()
+  private var animations = [(TimeInterval, ()->Void, () -> Void)]()
 
-  init() {
-  }
+  init() {}
 
   /// Queue the animated changes to one or more views using the specified duration and an initialization block.
   ///

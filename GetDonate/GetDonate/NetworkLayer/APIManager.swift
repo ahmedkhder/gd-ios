@@ -14,7 +14,10 @@ public protocol RequestType {
     var dataRequest: RequestData { get }
 }
 
-//MARK: Request
+//######################################################
+//MARK:----------------- CODABLE ----------------------
+//#####################################################
+//MARK: Request with Codable
 public extension RequestType {
     
     @discardableResult
@@ -97,7 +100,7 @@ public struct URLSessionNetworkDispatcher: NetworkDispatcher {
 }
 
 //######################################################
-//----------------- WITHOUT CODABLE -------------------
+//MARK:----------------- WITHOUT CODABLE ---------------
 //######################################################
 //Request Type
 public protocol DataRequest {
@@ -144,6 +147,7 @@ public func execute(request: RequestData,
     }
     dataTask.resume()
 }
+
 ///- Note: Printable Json
 private func getPrintableJSON(_ json: AnyObject) -> NSString {
     return JSONStringify(json, prettyPrinted: true) as NSString

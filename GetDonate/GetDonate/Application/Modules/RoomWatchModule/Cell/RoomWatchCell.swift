@@ -15,6 +15,9 @@ class RoomWatchCell: UITableViewCell, DequeuableRegistrable {
     @IBOutlet weak var lblDesc: UILabel!
     @IBOutlet weak var lblDate: UILabel!
     @IBOutlet weak var lblAmount: UILabel!
+    @IBOutlet weak var btnHeart: UILabel!
+    @IBOutlet weak var btnThumb: UILabel!
+    weak var delegate: CellCommonDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -25,7 +28,18 @@ class RoomWatchCell: UITableViewCell, DequeuableRegistrable {
 }
 //MARK: Setup Data
 extension RoomWatchCell {
-    func setupData() {
-        
+    func setupData(_ model: Any, delegate: CellCommonDelegate, for index: Int) {
+        self.delegate = delegate
+        self.btnHeart.tag = index
+        self.btnThumb.tag = index
+    }
+}
+//Button Actions
+extension RoomWatchCell {
+    @IBAction func clickOnHeart(_ sender: UIButton) {
+        self.delegate?.tableViewCell(self, didPressOn: .kHeart, tag: sender.tag)
+    }
+    @IBAction func clickOnThumbs(_ sender: UIButton) {
+        self.delegate?.tableViewCell(self, didPressOn: .kThumb, tag: sender.tag)
     }
 }

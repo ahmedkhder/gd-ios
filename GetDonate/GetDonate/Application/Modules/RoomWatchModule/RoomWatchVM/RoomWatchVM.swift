@@ -39,11 +39,11 @@ extension RoomWatchVM: UITableViewDataSource {
         return numberOfRow
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
+        return 126
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = RoomWatchCell.dequeue(from: self.tblView) else { return UITableViewCell() }
-        cell.setupData()
+        cell.setupData("", delegate: self, for: indexPath.row)
         return cell
     }
 }
@@ -62,4 +62,12 @@ extension RoomWatchVM: UITableViewDelegate {
       })
     }
 }
-
+//MARK: Cell Delegate
+extension RoomWatchVM: CellCommonDelegate {
+    func tableViewCell(_ cell: UITableViewCell, didPressOn action: CellActionType, tag: Int) {
+        switch action {
+        case .kHeart: break
+        case .kThumb: break
+        }
+    }
+}
