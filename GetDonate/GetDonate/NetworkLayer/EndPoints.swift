@@ -7,12 +7,12 @@
 //
 
 import UIKit
-// For Live: https://beta.biryanioncloud.com/
-// For dev => "http://dev-ekodus.com/boc/api/"
+
 private let BASE_URL = "http://3.141.33.73:5000/users/"
 
 // APIs
 struct APIs {
-    static let kLOGIN                       = BASE_URL + "login"
+    static let kSEND_OTP        = BASE_URL + "send-otp"
+    static let kVERIFY_OTP      = BASE_URL + "verify-otp"
 }
 

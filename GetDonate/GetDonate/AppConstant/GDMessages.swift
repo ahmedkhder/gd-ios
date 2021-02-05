@@ -76,5 +76,6 @@ extension NSLayoutConstraint {
 extension Int {
     static let CODE_200 = 200 // Success
     static let CODE_400 = 400 //user not found
+    static let CODE_404 = 404
 }
 

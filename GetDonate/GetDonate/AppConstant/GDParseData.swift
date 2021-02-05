@@ -8,18 +8,23 @@
 import Foundation
 
 struct UserInfo {
-    static func getUserInfo()-> LoginData? {
+    private static func getUserInfo()-> LoginData? {
         guard let userInfo = NSUserDefaults.value(LoginData.self, forKey: .LOGIN_INFO) else { return nil }
         return userInfo
     }
     static func getUserId() -> String? {
         guard let info = getUserInfo(),
-              let user_Id = info.id else { return .kEMPTY }
+              let id = info.id else { return .kEMPTY }
+        return "\(id)"
+    }
+    static func getUserID() -> String? {
+        guard let info = getUserInfo(),
+              let user_Id = info.uid else { return .kEMPTY }
         return "\(user_Id)"
     }
-    static func getUserToken() -> String? {
+    static func getMobileNo() -> String? {
         guard let info = getUserInfo(),
-              let user_Token = info.token else { return .kEMPTY }
+              let user_Token = info.phone else { return .kEMPTY }
         return "\(user_Token)"
     }
 }

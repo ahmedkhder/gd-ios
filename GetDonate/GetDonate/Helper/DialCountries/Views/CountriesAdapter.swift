@@ -37,11 +37,15 @@ class CountriesAdapter: NSObject, UITableViewDelegate, UITableViewDataSource {
 		let cell = UITableViewCell(style: .value1, reuseIdentifier: "\(indexPath.section)")
 		
 		cell.textLabel?.text = item.title
+        cell.textLabel?.textColor = .white
 		cell.detailTextLabel?.text = item.dialCode
+        cell.detailTextLabel?.textColor = .white
+        cell.backgroundColor = .clear
 		return cell
 	}
 	
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
 		let item = items[indexPath.row]
 		self.delegate?.didSelected(with: item)
 	}

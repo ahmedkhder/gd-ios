@@ -24,11 +24,11 @@ struct LoginM {
 
 struct LoginData: Codable {
     let id: Int?
-    let email: String?
-    let token: String?
+    let uid: String?
+    let phone: String?
     init(json: [String: Any]) {
         self.id = json["id"] as? Int
-        self.email = json["email"] as? String
-        self.token = json["token"] as? String
+        self.uid = json["uid"] as? String
+        self.phone = json["phone"] as? String
     }
 }

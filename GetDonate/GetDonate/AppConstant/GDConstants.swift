@@ -21,7 +21,7 @@ struct JKeys {
 }
 
 ///- Return:  Default Country code
-var Get_Dial_Code: String {
+func get_Country_Code()-> String {
     if let countryCode = (Locale.current as NSLocale).object(forKey: .countryCode) as? String {
         Log.print(countryCode)
         return countryCode

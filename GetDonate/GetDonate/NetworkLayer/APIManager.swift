@@ -139,7 +139,7 @@ public func execute(request: RequestData,
             return
         }
         if let json = try? JSONSerialization.jsonObject(with: _data, options: []) {
-            Log.print("url Response ====> 🇮🇳\(url) \n ", json)
+            Log.print("URL Response ====> 🇮🇳\(url) \n ", json)
             onSuccess(json as! [String : Any])
         } else {
             onError(ErrorType.noData)

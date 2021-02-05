@@ -21,7 +21,7 @@ enum CellActionType {
  }
 //MARK: =====> Common Cell Delegate <=====
 protocol CellCommonDelegate: class {
-    func tableViewCell(_ cell: UITableViewCell, didPressOn action: CellActionType tag: Int)
+    func tableViewCell(_ cell: UITableViewCell, didPressOn action: CellActionType, tag: Int)
 }
 
 

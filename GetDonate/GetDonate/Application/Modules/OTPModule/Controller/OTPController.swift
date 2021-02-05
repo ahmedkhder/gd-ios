@@ -15,7 +15,7 @@ class OTPController: UIViewController {
         didSet { self.btnVerify.isEnabled(false) }
     }
     @IBOutlet weak var btnResend: UIButton!
-    lazy var mobileNumebr: Observer<String> = {
+    lazy var mobileNumber: Observer<String> = {
         return Observer(.kEMPTY)
     }()
     var otpVM = OtpVM()
@@ -43,9 +43,11 @@ extension OTPController {
         self.otpView.getOTP = { otpString in
             self.otpVM.setOTP(Observer(otpString))
             self.btnVerify.isEnabled(otpString.length == 4)
+            otpString.length == 4 ? self.verifyOTP() : nil
         }
-        self.mobileNumebr.bindAndFire {
-            self.lblMessage.text = "We have send a OTP on your number\n\($0)"
+        self.mobileNumber.bindAndFire {
+            self.lblMessage.text = "We have sent a OTP on your number\n\($0)"
+            self.otpVM.mobileString = $0
         }
     }
     //MARK: Start Count Down Timer
@@ -75,12 +77,19 @@ extension OTPController {
         let seconds: Int = totalSeconds % 60
         return String(format: "00:%02d", seconds)
     }
+    //MARK: Call API 
+    private func verifyOTP() {
+        self.btnVerify.indicator(isVisible: true)
+        self.handleOTPResponse()
+        self.otpVM.requestVerifyOTP()
+    }
 }
 //MARK: Buttons Action
 extension OTPController {
     @IBAction func clickOnVerify(_ sender: UIButton) {
-        let roomVC = RoomWatchController.instantiate()
-        PUSH(roomVC)
+        self.btnVerify.indicator(isVisible: true)
+        self.handleOTPResponse()
+        self.otpVM.requestVerifyOTP()
     }
     @IBAction func clickOnResend(_ sender: UIButton) {
         let donateVC = DonationController.instantiate()
@@ -89,5 +98,30 @@ extension OTPController {
     @IBAction func clickOnBack() {
         POP()
     }
-    
+}
+//MARK: ====> Hndle Response <====
+extension OTPController {
+    private func handleOTPResponse() {
+        self.otpVM.onSuccess = {[weak self] response in
+            guard let weakSelf = self else { return }
+            MainQueue.async {
+                weakSelf.btnVerify.indicator(isVisible: false)
+            }
+            switch response {
+            case .success(result: let json):
+                let _ = json
+                MainQueue.async {
+                    let roomVC = RoomWatchController.instantiate()
+                    weakSelf.PUSH(roomVC)
+                }
+            case .failure(let error):
+                switch error {
+                case .network(string: let msg),
+                     .parser(string: let msg), .custom(string: let msg):
+                    weakSelf.showPopup(message: msg) {}
+                default: break
+                }
+            }
+        }
+    }
 }

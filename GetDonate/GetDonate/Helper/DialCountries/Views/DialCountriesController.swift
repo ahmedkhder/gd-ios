@@ -47,6 +47,7 @@ public class DialCountriesController: UITableViewController, UISearchResultsUpda
 		adapter = CountriesAdapter(items: countryFilter, delegate: self)
 		self.tableView.delegate = adapter
 		self.tableView.dataSource = adapter
+        self.tableView.backgroundColor = UIColor.rgb(15, 30, 54);
 	}
 	
 	private func setupSearchController() {
@@ -63,9 +64,7 @@ public class DialCountriesController: UITableViewController, UISearchResultsUpda
 		if let searchText = searchController.searchBar.text, !searchText.isEmpty {
 			countryFilter = countryList.filter { country in
 				return country.name.lowercased().contains(searchText.lowercased()) || (country.dialCode?.contains(searchText.toEnglishNumber()) == true) || country.code.lowercased().contains(searchText.lowercased())
-			}
-			
-			
+			}			
 		} else {
 			countryFilter = countryList
 		}

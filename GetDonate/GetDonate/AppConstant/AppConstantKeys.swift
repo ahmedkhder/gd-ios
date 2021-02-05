@@ -14,7 +14,9 @@ struct J_KEYS {
     static let kMSG         = "message"
     static let kDATA        = "data"
     static let kEMAIL       = "email"
-    static let kPASSWORD    = "password"
+    static let kMOBILE      = "mobile"
+    static let kPHONE       = "phone"
+    static let kOTP         = "otp"
 }
 
 

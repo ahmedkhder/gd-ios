@@ -3,4 +3,82 @@
    uuid = "D7CDEF65-EA52-4055-845C-DE9EEAFEB7CA"
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.ExceptionBreakpoint">
+         <BreakpointContent
+            uuid = "695E1175-6FEF-4BCD-BC4A-46F602760BA0"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            breakpointStackSelectionBehavior = "1"
+            scope = "1"
+            stopOnStyle = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "59AEED38-D6E7-44AB-9505-594930330FF2"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GetDonate/Application/Modules/OTPModule/Controller/OTPController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "110"
+            endingLineNumber = "110"
+            landmarkName = "handleOTPResponse()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "59AEED38-D6E7-44AB-9505-594930330FF2 - 9c9edb2043d67d7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (GetDonate.Result&lt;Swift.Optional&lt;Swift.Dictionary&lt;Swift.String, Any&gt;&gt;, GetDonate.ErrorResult&gt;) -&gt; () in GetDonate.OTPController.(handleOTPResponse in _2AF612547FEB2675828E98311CACF2DC)() -&gt; ()"
+                  moduleName = "GetDonate"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shivakr./Downloads/DownloadedImages/gd-ios/GetDonate/GetDonate/Application/Modules/OTPModule/Controller/OTPController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "111"
+                  endingLineNumber = "111"
+                  offsetFromSymbolStart = "757">
+               </Location>
+               <Location
+                  uuid = "59AEED38-D6E7-44AB-9505-594930330FF2 - 9c9edb2043d67d7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (GetDonate.Result&lt;Swift.Optional&lt;Swift.Dictionary&lt;Swift.String, Any&gt;&gt;, GetDonate.ErrorResult&gt;) -&gt; () in GetDonate.OTPController.(handleOTPResponse in _2AF612547FEB2675828E98311CACF2DC)() -&gt; ()"
+                  moduleName = "GetDonate"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shivakr./Downloads/DownloadedImages/gd-ios/GetDonate/GetDonate/Application/Modules/OTPModule/Controller/OTPController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "111"
+                  endingLineNumber = "111"
+                  offsetFromSymbolStart = "958">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "74F52BC4-30C4-4A79-B924-CE8593A43D65"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GetDonate/Application/Modules/OTPModule/OtpVM/OtpVm.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
+            landmarkName = "requestVerifyOTP()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

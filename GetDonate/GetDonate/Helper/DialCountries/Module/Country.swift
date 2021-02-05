@@ -29,7 +29,7 @@ public struct Country: Decodable {
 	}
 	public let dialCode: String?
 	
-	public static func getCurrentCountry() -> Country? {
+	public static func getCurrentCountryDialCode() -> Country? {
 		let locale: NSLocale = NSLocale.current as NSLocale
 		let currentCode: String? = locale.countryCode
 		return CountriesFetcher().fetch().first(where: { $0.code ==  currentCode})

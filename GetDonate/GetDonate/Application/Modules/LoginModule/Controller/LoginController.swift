@@ -15,8 +15,10 @@ class LoginController: UIViewController {
     }
     let maxNumberOfCharacters = 16
     let loginVM = LoginVM()
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.getCountryCode()
         self.configUI()
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -64,6 +66,12 @@ extension LoginController {
 //            Log.print(array)
 //        }
     }
+    //MARK: Get current Country Code
+    private func getCountryCode() {
+        let ccode = Country.getCurrentCountryDialCode()
+        self.txtCCode.text = ccode?.dialCode
+        self.loginVM.countryCode = Observer(ccode?.dialCode ?? "")
+    }
 }
 //MARK: Handle API Response
 extension LoginController {
@@ -77,14 +85,16 @@ extension LoginController {
                 let _ = json
                 MainQueue.async {
                     let otpView = OTPController.instantiate()
-                    otpView.mobileNumebr = Observer(self.txtFieldMobile.text!)
+                    otpView.mobileNumber = Observer(self.txtFieldMobile.text!)
                     self.PUSH(otpView)
                 }
             case .failure(let error):
                 switch error {
                 case .network(string: let msg),
                      .parser(string: let msg), .custom(string: let msg):
-                    self.showPopup(message: msg) {}
+                    MainQueue.async {
+                        self.navigationController?.showToast(message: msg)
+                    }
                 default: break
                 }
             }

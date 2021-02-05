@@ -151,6 +151,8 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
+                <outlet property="btnHeart" destination="43E-Nu-wd5" id="4Ji-uG-PD9"/>
+                <outlet property="btnThumb" destination="9VM-xd-lA0" id="pun-q9-ICa"/>
                 <outlet property="imgView" destination="fo3-uz-QiP" id="DVp-Z7-tOc"/>
                 <outlet property="lblAmount" destination="mWX-Pq-rou" id="nqD-6X-NO2"/>
                 <outlet property="lblDate" destination="Ivg-mL-ZZ5" id="bt6-T9-kwc"/>

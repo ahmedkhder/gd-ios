@@ -46,8 +46,8 @@ extension LoginVM {
 
 extension LoginVM: DataRequest {
     var dataRequest: RequestData {
-        let params = [J_KEYS.kEMAIL: "test1@gmail.com", J_KEYS.kPASSWORD: "12345"]
-        return RequestData(path: APIs.kLOGIN,
+        let params = [J_KEYS.kMOBILE: mobileNo.value]
+        return RequestData(path: APIs.kSEND_OTP,
                            method: .post,
                            params: params,
                            headers: HEADER_NON_AUTH)
@@ -71,8 +71,6 @@ extension LoginVM: DataRequest {
             guard let data = json[J_KEYS.kDATA] as? [String: Any] else {
                 return
             }
-            let loginM = LoginM(json: json)
-            NSUserDefaults.set(encodable: loginM.data, forKey: .LOGIN_INFO)
             self.onSuccess?(.success(result: data))
             
         }, onError: { (error) in
@@ -80,23 +78,3 @@ extension LoginVM: DataRequest {
         })
     }
 }
-/*
- {
-     "status": true,
-     "code": 200,
-     "message": "success",
-     "data": {
-         "id": 3,
-         "email": "test1@gmail.com",
-         "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjMsImFsZyI6IlJTMjU2IiwiaXNzIjoiYWRtaW5AZ2QuY29tIiwic3ViIjoiYWRtaW5AZ2QuY29tIiwiYXVkIjoiaHR0cHM6Ly9pZGVudGl0eXRvb2xraXQuZ29vZ2xlYXBpcy5jb20vZ29vZ2xlLmlkZW50aXR5LmlkZW50aXR5dG9vbGtpdC52MS5JZGVudGl0eVRvb2xraXQiLCJpYXQiOjE2MTIwOTU0NTgsImV4cCI6MTY3NTE2NzQ1OCwiaXNfYWRtaW4iOnRydWUsImlzX3VzZXIiOmZhbHNlfQ.6yGnlVBABOcgm0-aP9l6AhSITdVdds_UWEWvIHbvo-4"
-     }
- }
- =======
- {
-     "code": 400,
-     "isError": true,
-     "status": "Bad Request",
-     "message": "error user not found",
-     "data": null
- }
- */

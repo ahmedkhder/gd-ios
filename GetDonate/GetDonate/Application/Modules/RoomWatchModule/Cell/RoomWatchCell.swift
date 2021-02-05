@@ -15,8 +15,8 @@ class RoomWatchCell: UITableViewCell, DequeuableRegistrable {
     @IBOutlet weak var lblDesc: UILabel!
     @IBOutlet weak var lblDate: UILabel!
     @IBOutlet weak var lblAmount: UILabel!
-    @IBOutlet weak var btnHeart: UILabel!
-    @IBOutlet weak var btnThumb: UILabel!
+    @IBOutlet weak var btnHeart: UIButton!
+    @IBOutlet weak var btnThumb: UIButton!
     weak var delegate: CellCommonDelegate?
     
     override func awakeFromNib() {
